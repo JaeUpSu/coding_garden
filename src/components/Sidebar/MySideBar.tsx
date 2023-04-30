@@ -76,7 +76,6 @@ const MySideBar: React.FC<Props> = ({ activeTab }: Props) => {
           color={activeTab === "lectures" ? "white" : undefined}
           bg={activeTab === "lectures" ? "#769dd6" : undefined}
         >
-          {" "}
           <BsPlayCircle />
           <Box>수강중인 강의</Box>
         </HStack>

@@ -30,3 +30,30 @@ export interface ILectureData {
   reviews_num: number;
   rating: number;
 }
+
+export interface CalculatedLectureItem {
+  img: string;
+  LectureId: number;
+  thumbnail: string;
+  lectureDescription: string;
+  lectureTitle: string;
+  targetAudience: string;
+  rating: number;
+  instructor: {
+    username: string;
+  };
+}
+export interface UserData {
+  username: string;
+  email: string;
+  password: string;
+  passwordCheck: string;
+  name: string;
+  dateBirth: string;
+  gender: string;
+  phoneNumber: string;
+  position: string;
+  skill: string;
+  termsOfUse: String;
+  funnel: string;
+}

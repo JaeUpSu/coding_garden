@@ -2,6 +2,11 @@ import { useRouter } from "next/router";
 import { Button } from "@chakra-ui/react";
 import { ILecture, IPayProps } from "@/typings/PaymentResult";
 
+declare global {
+  interface Window {
+    IMP: any;
+  }
+}
 interface ProcessLectures {
   id: string[];
   title: string[];
@@ -18,7 +23,7 @@ function processLecture(lectures: ILecture[]): string {
     instructor: [],
   };
 
-  lectures.map((item, idx) => {
+  lectures.map((item) => {
     processedLectures["title"].push(item.title);
     processedLectures["thumbnail"].push(item.thumbnail);
     processedLectures["instructor"].push(item.instructor);
@@ -61,13 +66,13 @@ export function RequestPayment(props: IPayProps): React.ReactElement {
           card_quota: [3], // 할부개월 3개월까지 활성화
         },
       },
-      function (rsp) {
+      function (rsp: any) {
         // callback
         if (!rsp.error_code) {
           const buyedLectures = processLecture(props.lectures);
           sessionStorage.setItem("buy_lectures", buyedLectures);
           sessionStorage.setItem("buy_username", props.buyer_name);
-          router.push("/wasBuyed");
+          router.push("/purchased");
         }
       }
     );

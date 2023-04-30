@@ -1,0 +1,190 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Wrapper {
+  // max-width: 550px;
+  width: 100%;
+
+  .TopBox {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .bottomborder {
+    border-bottom: 1px solid #003c93;
+  }
+  .buttonflex {
+    display: flex;
+    justify-content: center;
+  }
+}
+.Input {
+  width: 100%;
+  border-radius: 3px;
+  padding: 13px;
+  background-color: #fafafa;
+  border: 0.5px solid rgb(219, 219, 219);
+  margin-top: 10px;
+  box-sizing: border-box;
+  // max-width: 0px;
+}
+.DarkInput {
+  @extend .Input;
+  color: rgb(49, 49, 49);
+  &::placeholder {
+    color: rgb(119, 119, 119);
+  }
+}
+
+.Input:focus {
+  outline-color: #003c93;
+}
+
+.p {
+  color: #003c93;
+}
+
+.p::before {
+  display: inline;
+  // content: '⚠ ';
+}
+
+.input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  // margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.input:disabled {
+  opacity: 0.4;
+}
+
+.checkButton {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 15px;
+  color: #003c93;
+
+  border-radius: 3px;
+  border: 1px solid #003c93;
+  width: 90px;
+}
+.flexContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  .genderContainer {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    .genderlabel {
+      margin-left: 10px;
+    }
+  }
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+
+  background-color: #003c93;
+  color: white;
+  text-align: center;
+  padding: 14px 0px;
+  font-weight: bold;
+  max-width: 300px;
+}
+.label {
+  // margin-top: 16px;
+  // margin-bottom: 10px;
+  font-weight: 600;
+}
+.Radio {
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #999;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.Radio:checked {
+  border: 6px solid #003c93;
+}
+.Checkbox {
+  margin-bottom: 23px;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #999;
+  appearance: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.Checkbox:checked {
+  border: 6px solid #003c93;
+}
+.errors {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #003c93;
+}
+.question {
+  border-bottom: 1px solid #003c93;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.answer {
+  font-size: 16px;
+}
+.h6 {
+  // margin-top: 30px;
+  font-size: 12px;
+}
+.color {
+  color: gray;
+}
+.h6Id {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+.h6Gender {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+.none {
+  color: #999;
+  margin-left: 10px;
+}

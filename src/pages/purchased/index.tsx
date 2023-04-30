@@ -88,7 +88,7 @@ const PaymentsResultPage: React.FC = () => {
   });
 
   const onMyPage = () => {
-    router.push(`/mypage/lecture`);
+    router.push(`/mypage/lectures`);
   };
   const onWholeLectures = () => {
     router.push(`/lectures/all/all/?page=1`);

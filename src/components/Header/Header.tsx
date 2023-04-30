@@ -74,7 +74,7 @@ export default function WithSubnavigation() {
     removeAccessToken();
   };
   const handleButtonClick = () => {
-    window.location.href = "/mypage";
+    window.location.href = "/mypage/dashboard";
   };
   const token = getAccessToken();
 
